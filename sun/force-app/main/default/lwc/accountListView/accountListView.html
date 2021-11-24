@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+        <h2 style="color: black;"> Financial Services Account Listing</h2>
+        <template if:true={accList}>
+            <lightning-datatable data={accList} columns={columns} key-field="Id">
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-card>
+</template>
